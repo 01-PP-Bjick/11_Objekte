@@ -29,17 +29,17 @@
 // }
 
 /***** Objekte 1 Daten/Funktionen *******/
-let person =    {
-                        firstName:"Thomas",
-                        familyName:"Korn",
-                        salary: [120000,160000],
-                        permission: true,
-                        sayHello:
-                                function(){
-                                        return "Hello, ich bin "+
-                                        this.firstName+"!";
-                                }
-                };
+// let person =    {
+//                         firstName:"Thomas",
+//                         familyName:"Korn",
+//                         salary: [120000,160000],
+//                         permission: true,
+//                         sayHello:
+//                                 function(){
+//                                         return "Hello, ich bin "+
+//                                         this.firstName+"!";
+//                                 }
+//                 };
 
 // output(person);
 // output(person.firstName);
@@ -48,13 +48,32 @@ let person =    {
 // output(person.permission);
 // output(person.sayHello());
 
-const txt =      person.sayHello() + " Ich bin " + person.firstName + " " +
-                 person.familyName +
-                 " und verdiene " +
-                 person.salary[1] + " p.a";
+// const txt =      person.sayHello() + " Ich bin " + person.firstName + " " +
+//                  person.familyName +
+//                  " und verdiene " +
+//                  person.salary[1] + " p.a";
 
-output(txt)
+// output(txt);
 
+/***** Objekte 2 - Hierarchie *****/
+// Der Baikalsee ist mit 1642 m der tiefste See der Erde. ...
+const baikal = {
+        value:"10m",
+        deep:{
+                deeper:{
+                        deepest:{
+                                value:"Das Licht - auf 1642m!",
+                                temperature: 4
+                        }
+                }
+        }
+};
+
+output(baikal);
+output(baikal.value);
+output(baikal.deep.deeper.deepest);
+output(baikal.deep.deeper.deepest.value);
+output(baikal.deep.deeper.deepest.temperature);
 
 /** Ausgabe */
 function output(outputData) {
